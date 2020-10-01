@@ -52,19 +52,29 @@ public class LinkStrand implements IDnaStrand{
         return this;
     }
 
-    //TODO:
     @Override
     public IDnaStrand reverse() {
-        LinkStrand reversedLS = new LinkStrand();
-        Node index = this.myFirst;
-        reversedLS.myLast = index;
-        while (index != null) {
-            Node oldFirst = reversedLS.myFirst;
-            reversedLS.myFirst = index;
-            reversedLS.myFirst.next = oldFirst;
-            index = index.next;
+        Node i = this.myFirst;
+        String toRev = i.info;
+        StringBuilder sb = new StringBuilder(toRev);
+        StringBuilder sbRev = sb.reverse();
+        LinkStrand res = new LinkStrand(sbRev.toString());
+        //Node firstRes = res;
+        i = i.next;
+        while (i != null) {
+            toRev = i.info;
+            sb = new StringBuilder(toRev);
+            sbRev = sb.reverse();
+            Node temp = new Node(sbRev.toString());
+            //System.out.println("Temp: " + temp.info + " - > res: " + res.info);
+            temp.next = res.myFirst;
+            res.myFirst = temp;
+            res.mySize = res.mySize + temp.info.length();
+            //res.next = new Node(i.info);
+            i = i.next;
+            //es = res.next;
         }
-        return reversedLS;
+        return res;
     }
 
     @Override
