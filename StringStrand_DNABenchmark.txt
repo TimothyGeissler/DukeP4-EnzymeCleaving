@@ -1,0 +1,21 @@
+C:\Users\timdg\.jdks\openjdk-14.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\lib\idea_rt.jar=55112:C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\timdg\iCloudDrive\Documents\School\Fall 2020\Classes\CS 201\p4-dnalinked-fall20\out\production\P4-DNAlinked;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\timdg\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\timdg\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\timdg\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar" DNABenchmark
+dna length = 4,639,221
+cutting at enzyme gaattc
+-----
+Class	                splicee	      recomb	time	appends
+-----
+StringStrand:	            256	      4,800,471	0.756	1290
+StringStrand:	            512	      4,965,591	0.715	1290
+StringStrand:	          1,024	      5,295,831	0.710	1290
+StringStrand:	          2,048	      5,956,311	0.863	1290
+StringStrand:	          4,096	      7,277,271	0.809	1290
+StringStrand:	          8,192	      9,919,191	1.322	1290
+StringStrand:	         16,384	     15,203,031	2.186	1290
+StringStrand:	         32,768	     25,770,711	5.054	1290
+StringStrand:	         65,536	     46,906,071	10.954	1290
+StringStrand:	        131,072	     89,176,791	17.772	1290
+StringStrand:	        262,144	    173,718,231	30.236	1290
+StringStrand:	        524,288	    342,801,111	48.150	1290
+StringStrand:	      1,048,576	    680,966,871	79.961	1290
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/jdk.internal.misc.Unsafe.allocateUninitializedArray(Unsafe.java:1387)

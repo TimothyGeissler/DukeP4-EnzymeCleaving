@@ -1,0 +1,20 @@
+C:\Users\timdg\.jdks\openjdk-14.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\lib\idea_rt.jar=55258:C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\timdg\iCloudDrive\Documents\School\Fall 2020\Classes\CS 201\p4-dnalinked-fall20\out\production\P4-DNAlinked;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\timdg\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\timdg\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\timdg\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\timdg\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar" DNABenchmark
+dna length = 4,639,221
+cutting at enzyme gaattc
+-----
+Class	                splicee	      recomb	time	appends
+-----
+StringBuilderStrand:	            256	      4,800,471	0.026	1290
+StringBuilderStrand:	            512	      4,965,591	0.020	1290
+StringBuilderStrand:	          1,024	      5,295,831	0.006	1290
+StringBuilderStrand:	          2,048	      5,956,311	0.005	1290
+StringBuilderStrand:	          4,096	      7,277,271	0.006	1290
+StringBuilderStrand:	          8,192	      9,919,191	0.006	1290
+StringBuilderStrand:	         16,384	     15,203,031	0.015	1290
+StringBuilderStrand:	         32,768	     25,770,711	0.023	1290
+StringBuilderStrand:	         65,536	     46,906,071	0.046	1290
+StringBuilderStrand:	        131,072	     89,176,791	0.070	1290
+StringBuilderStrand:	        262,144	    173,718,231	0.147	1290
+StringBuilderStrand:	        524,288	    342,801,111	0.259	1290
+StringBuilderStrand:	      1,048,576	    680,966,871	0.378	1290
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
