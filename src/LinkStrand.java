@@ -119,7 +119,7 @@ public class LinkStrand implements IDnaStrand{
      * @return character at given index of LinkStrand
      */
     @Override
-    public char charAt(int index) {
+    public char charAt(int index) throws IndexOutOfBoundsException {
         if (index < this.myIndex) {
             this.myIndex = 0;
             this.myLocalIndex = 0;
