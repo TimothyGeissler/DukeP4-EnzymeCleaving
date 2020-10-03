@@ -120,7 +120,9 @@ public class LinkStrand implements IDnaStrand{
      */
     @Override
     public char charAt(int index) {
-        try {
+        if ((index < 0)) {
+            throw new StringIndexOutOfBoundsException(index);
+        } else {
             if (index < this.myIndex) {
                 this.myIndex = 0;
                 this.myLocalIndex = 0;
@@ -135,8 +137,6 @@ public class LinkStrand implements IDnaStrand{
                 }
             }
             return this.myCurrent.info.charAt(this.myLocalIndex);
-        } catch (IndexOutOfBoundsException ex) {
-            throw new StringIndexOutOfBoundsException(index);
         }
     }
 
