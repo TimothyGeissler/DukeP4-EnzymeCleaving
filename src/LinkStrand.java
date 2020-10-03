@@ -119,21 +119,25 @@ public class LinkStrand implements IDnaStrand{
      * @return character at given index of LinkStrand
      */
     @Override
-    public char charAt(int index) throws StringIndexOutOfBoundsException {
-        if (index < this.myIndex) {
-            this.myIndex = 0;
-            this.myLocalIndex = 0;
-            this.myCurrent = myFirst;
-        }
-        while (this.myIndex != index) {
-            this.myIndex++;
-            this.myLocalIndex++;
-            if (this.myLocalIndex >= this.myCurrent.info.length()) {
+    public char charAt(int index) {
+        try {
+            if (index < this.myIndex) {
+                this.myIndex = 0;
                 this.myLocalIndex = 0;
-                this.myCurrent = this.myCurrent.next;
+                this.myCurrent = myFirst;
             }
+            while (this.myIndex != index) {
+                this.myIndex++;
+                this.myLocalIndex++;
+                if (this.myLocalIndex >= this.myCurrent.info.length()) {
+                    this.myLocalIndex = 0;
+                    this.myCurrent = this.myCurrent.next;
+                }
+            }
+            return this.myCurrent.info.charAt(this.myLocalIndex);
+        } catch (IndexOutOfBoundsException ex) {
+            throw new StringIndexOutOfBoundsException(index);
         }
-        return this.myCurrent.info.charAt(this.myLocalIndex);
     }
 
     /**
